@@ -16,10 +16,10 @@ var now = moment();
 today.textContent = now.format("dddd, Do MMM, YYYY");
 
 var userInputArr = JSON.parse(localStorage.getItem("savedCities")) || [];
-var lastSearchedCity = userInputArr.at(-1) || "Tokyo";
+var lastSearchedCity = userInputArr.at(-1) || "Thirunelveli"; // Default to Thirunelveli
 
 displayRecentSearches();
-getCurrentWeather(lastSearchedCity);
+getCurrentWeather(lastSearchedCity); // Fetch weather for the default city or last searched
 
 searchBtn.addEventListener("click", function (event) {
     event.preventDefault();
@@ -173,3 +173,4 @@ function getCurrentUV(data) {
         uvEl.classList.add("uv-extreme");
     }
 }
+

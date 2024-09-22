@@ -1,0 +1,252 @@
+:root {
+    --darkColor: rgb(30, 35, 39);
+    --lightColor: rgb(235, 217, 183);
+    --primeColor: rgb(31, 110, 110);
+    --secondColor:rgba(175, 59, 59, 0.945);
+    --thirdColor: rgba(78, 78, 73, 0.87);
+    --fourthColor: rgba(59, 76, 175, 0.945);
+    --dashedBorder: dashed 2px var(--lightColor);
+    --solidBorder: solid 1px var(--lightColor);
+    --doubleBorder: double 3px var(--lightColor);
+    --borderRadius: 1rem;
+   }
+
+   ::selection {
+    background-color: var(--primeColor);
+    color: var(--darkColor);
+  }
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Nunito', 'Outfit', sans-serif;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    background-color: var(--darkColor); 
+    background: url('./assets/background.jpg') no-repeat center center fixed; 
+    background-size: cover; 
+    color: var(--lightColor);
+    text-align: center;
+    margin: 0;
+}
+
+
+  main {
+      display: flex;
+      flex-direction: row;
+  }
+
+  h1 {
+      margin:0 auto;
+      font-size: 4rem;
+      padding: 5rem 3rem 2rem 3rem;
+  }
+
+  h2 {
+    margin: 0.5rem 0;
+  }
+
+  .left {
+   
+    display: flex;
+    width:30%;
+    flex-direction: column;
+     margin: 0;
+     padding: 1em;
+     
+  }
+
+   #searchedCities {
+     display: flex;
+     flex-direction: column-reverse;
+     justify-content: center;
+   }
+
+  .textInput {
+    margin: 1rem auto 0 auto;
+    background-color: var(--darkColor);
+    color:var(--lightColor);
+    font-family: inherit;
+  
+    border: var(--solidBorder);
+    border-radius: var(--borderRadius);
+    width: 20rem;
+    padding: 1.5rem;
+    text-align: center;
+
+  }
+  .btn {
+        margin: 1rem auto;
+        background-color: var(--darkColor);
+        color:var(--lightColor);
+        font-family: inherit;
+  
+        border: var(--solidBorder);
+        border-radius: var(--borderRadius);
+        width: 20rem;
+        padding: 1rem;
+        text-align: center;
+  }
+
+#searchBtn, #clearBtn {
+        border: var(--doubleBorder);
+        background-color: var(--thirdColor);
+}
+.btn:hover {
+    background-color: var(--primeColor);
+    box-shadow: inset 0px 0px 8px var(--primeColor), 0 0 15px var(--primeColor);
+    transition: all 0.5s ease-in-out;
+}
+
+  hr {
+      width: 100%;
+  }
+
+  .right {
+      display: flex;
+      width:70%;
+      flex-direction: column;
+      margin: 0;
+      padding: 0 4em;
+  }
+  
+#cityInfo {
+    padding: 0 3em 2em 3em;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    border: var(--dashedBorder);
+    border-radius: var(--borderRadius);
+}
+
+
+#weatherIcon {
+  margin: 0 auto;
+  height: 10rem;
+  width: 10rem;
+}
+legend {
+  padding: 2rem;
+}
+
+span {
+  justify-content: space-around;
+  margin: 1rem;
+}
+#fiveDayFieldset {
+  margin: 0;
+  border-radius: var(--borderRadius);
+}
+#forecastContainer {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+  }
+
+
+.uv-low {
+  background-color:rgb(108, 160, 95);
+  padding: 0.3em;
+  border-radius: 1em;
+  width:30%;
+  margin: 0 auto;
+}
+
+.uv-moderate {
+  background-color:rgba(197, 199, 68, 0.952);
+  padding: 0.3em;
+  border-radius: 1em;
+  width:30%;
+  margin: 0 auto;
+}
+
+.uv-high {
+  background-color:rgb(207, 155, 76);
+  padding: 0.3em;
+  border-radius: 1em;
+  width:30%;
+  margin: 0 auto;
+}
+
+.uv-veryHigh {
+  background-color:rgb(160, 95, 100);
+  padding: 0.3em;
+  border-radius: 1em;
+  width:30%;
+  margin: 0 auto;
+}
+
+.uv-extreme {
+  background-color:rgb(95, 96, 160);
+  padding: 0.3em;
+  border-radius: 1em;
+  width:30%;
+  margin: 0 auto;
+}
+
+#forecastContainer div img {
+  margin: 0 auto;
+  height: 8rem;
+  width: 8rem;
+}
+
+  #contact, #mycontact {
+    font-size:0.8rem;
+      text-align: center;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+   text-decoration: none;
+    color: var(--lightColor);
+  }
+
+
+  @media screen and (max-width:1000px) {
+
+   body {
+     font-size: 1.5rem;
+   }
+
+   .textInput {
+    margin: 0 auto;
+    padding: 1rem 0;
+    text-align: center;
+
+  }
+         
+}
+
+
+@media screen and (max-width:480px) {
+  html {
+    min-width: 480px;
+  }
+    body {
+       
+        width: 100%;
+        font-size:1.5rem;
+    }
+
+    main {
+      width: 100%;
+      flex-direction: column;
+  }
+   .left {
+   
+     width:100%;
+     margin: 0;
+     justify-content: center;
+   }
+   .right {
+     margin: 0;
+     justify-content: center;
+     overflow: scroll;
+   }
+
+   #cityInfo {
+     width: 111%;
+   }
+         
+}

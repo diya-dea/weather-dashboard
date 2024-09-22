@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comforter&family=Comforter+Brush&family=Nunito:wght@200&family=Outfit:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href=".\assets\css\styles.css">
+   
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main>
+        <aside class="left">
+            <form action="">
+                <label for="searchInput" id="searchLabel">Search for a city</label>
+                <br>
+                <input type="text" id="searchInput" class="textInput" placeholder="Enter a city name">
+                <br>
+                <button type="submit" id="searchBtn" class="btn">Search</button>
+            </form>
+            <hr>
+            <div id="searchedCities"></div>
+            <button type="button" id="clearBtn" class="btn">Clear</button>
+
+
+        </aside>
+
+        <section class="right">
+            <fieldset id="cityInfo">
+                <legend id="today"></legend>
+                <h2 id="pickedCity"></h2>
+                <img src="" alt="Weather icon" id="weatherIcon">
+                <div id="cityCondition"></div>
+            </fieldset>
+
+            <fieldset id="fiveDayFieldset">
+                <legend>5-Day Forecast</legend>
+                <div id="forecastContainer"></div>
+            </fieldset>
+
+        </section>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+
+
+</html>
